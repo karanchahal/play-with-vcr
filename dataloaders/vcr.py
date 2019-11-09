@@ -363,8 +363,9 @@ class VCRLoader(torch.utils.data.DataLoader):
         return loader
 
 # You could use this for debugging maybe
-# if __name__ == '__main__':
-#     train, val, test = VCR.splits()
-#     for i in range(len(train)):
-#         res = train[i]
-#         print("done with {}".format(i))
+if __name__ == '__main__':
+     train, val, test = VCR.splits()
+     for i in range(len(train)):
+         res = train[i]
+         print(res[0].shape, res[1])
+         break
